@@ -4,15 +4,15 @@
 #include "Quack.h"
 #include "FlyWithWings.h"
 
-class MallarDuck : public Duck {
+class MallardDuck : public Duck {
 public:
-    MallarDuck() {
+    MallardDuck() {
         quackBehavior = new Quack();
         flyBehavior = new FlyWithWings();
     }
 
     void display() {
-        std::cout << "I am MallarDuck\n";
+        std::cout << "I am MallardDuck\n";
     }
 };
 

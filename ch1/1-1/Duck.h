@@ -7,22 +7,22 @@
 class Duck
 {
 public:
-    FlyBehavior* flyBehavior;
-    QuackBehavior* quackBehavior;
-    Duck() {}
-    
-    virtual void display() = 0;
+	FlyBehavior* flyBehavior;
+	QuackBehavior* quackBehavior;
+	Duck() {}
 
-    void performQuack() {
-        quackBehavior->quack();
-    }
+	virtual void display() = 0;
 
-    void performFly() {
-        flyBehavior->fly();
-    }
+	void performQuack() {
+		quackBehavior->quack();
+	}
 
-    void swim() {
-        std::cout << "Swim" << "\n";
-    }
+	void performFly() {
+		flyBehavior->fly();
+	}
+
+	void swim() {
+		std::cout << "Swim" << "\n";
+	}
 };
 
