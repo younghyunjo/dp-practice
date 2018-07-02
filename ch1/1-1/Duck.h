@@ -13,6 +13,14 @@ public:
 
 	virtual void display() = 0;
 
+	void setFlyBehavior(FlyBehavior* fb) {
+		flyBehavior = fb;
+	};
+
+	void setQuackBehavior(QuackBehavior* qb) {
+		quackBehavior = qb;
+	}
+
 	void performQuack() {
 		quackBehavior->quack();
 	}
