@@ -8,27 +8,20 @@
 #include <iostream>
 #include <vector>
 
+#include "pizzaingredientfactory.h"
+
 using namespace std;
 
 class Pizza {
 public:
     string name;
     string dough;
-    string sauce;
     vector<string> toppings;
 
-    void prepare() {
-        cout << "Preparing " + name << endl;
-
-        cout << "Toppings : ";
-        for (auto t : toppings) {
-            cout << t << " ";
-        }
-        cout << endl;
-    }
+    virtual void prepare() = 0;
 
     void bake() {
-        cout << "baking" << endl;
+        cout << "bake" << endl;
     }
 
     void cut () {

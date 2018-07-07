@@ -7,16 +7,4 @@
 
 #include "pizza.h"
 
-class NYCheesePizza : public Pizza {
-public:
-    NYCheesePizza() {
-        name = "NY Style Chease Pizza";
-        dough = "Thin";
-        sauce = "Marinara Sauch";
-
-        toppings.push_back("Plum");
-        toppings.push_back("Reggiano");
-    }
-};
-
 #endif //INC_3_1_NYPIZZA_H

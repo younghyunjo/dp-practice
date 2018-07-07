@@ -3,4 +3,4 @@ project(3_1)
 
 set(CMAKE_CXX_STANDARD 11)
 
-add_executable(3_1 main.cpp pizza.h nypizza.h chicagopizza.h pizzastore.h nypizzastore.h chicagopizzastore.h)
+add_executable(3_1 main.cpp pizza.h nypizza.h chicagopizza.h pizzastore.h nypizzastore.h chicagopizzastore.h pizzaingredientfactory.h dough.h thindough.h nypizzaingredient.h cheesepizza.h)

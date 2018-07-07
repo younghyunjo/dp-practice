@@ -6,14 +6,22 @@
 #define INC_3_1_CHICAGOPIZZA_H
 
 #include "pizza.h"
+#include "pizzaingredientfactory.h"
 
 class ChicagoCheesePizza : public Pizza {
-    ChicagoCheesePizza() {
+public:
+    ChicagoCheesePizza(PizzaIngredientFactory* f) {
         name = "Chicago Cheease Pizza";
-        dough = "Thick";
-        sauce = "Mayo";
-        toppings.push_back("Pepperoni");
+        pif = f;
     }
+
+    void prepare() {
+        std::cout << pif->createDough() << std::endl;
+    }
+
+private:
+    PizzaIngredientFactory* pif;
+
 };
 
 #endif //INC_3_1_CHICAGOPIZZA_H
