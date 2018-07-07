@@ -10,6 +10,7 @@
 #include "nypizza.h"
 
 class NYPizzaStore : public PizzaStore {
+public:
     Pizza* createPizza(string type) override  {
         if (type == "cheese") {
             return new NYCheesePizza();

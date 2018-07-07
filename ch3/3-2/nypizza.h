@@ -8,6 +8,7 @@
 #include "pizza.h"
 
 class NYCheesePizza : public Pizza {
+public:
     NYCheesePizza() {
         name = "NY Style Chease Pizza";
         dough = "Thin";

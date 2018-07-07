@@ -8,6 +8,7 @@
 #include "pizza.h"
 
 class PizzaStore {
+public:
     Pizza* orderPizza(string type) {
         Pizza* pizza = createPizza(type);
         pizza->prepare();
@@ -18,7 +19,7 @@ class PizzaStore {
         return pizza;
     }
 
-    virtual Pizza* createPizza(string type);
+    virtual Pizza* createPizza(string type) = 0;
 };
 
 #endif //INC_3_1_PIZZASTORE_H

@@ -5,7 +5,7 @@
 
 int main() {
     PizzaStore* nyPizzaStore = new NYPizzaStore();
-    nyPizzaStore->orderPizza();
+    nyPizzaStore->orderPizza(string("cheese"));
 
     return 0;
 
