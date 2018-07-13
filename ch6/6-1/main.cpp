@@ -10,7 +10,6 @@ int main() {
     SimpleRemoteControl remoteControl;
     remoteControl.setCommand(&lightOnCommand);
 
-
     remoteControl.buttonPressed();
     return 0;
 }
