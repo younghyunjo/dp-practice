@@ -3,4 +3,4 @@ project(6_2)
 
 set(CMAKE_CXX_STANDARD 11)
 
-add_executable(6_2 main.cpp Command.h RemoteControl.h Light.h)
+add_executable(6_2 main.cpp Command.h RemoteControl.h Light.h Fan.h)
