@@ -13,7 +13,5 @@ int main() {
     turkeyAdapter.quack();
     turkeyAdapter.fly();
 
-
-    std::cout << "Hello, World!" << std::endl;
     return 0;
 }
