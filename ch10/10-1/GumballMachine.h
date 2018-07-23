@@ -5,24 +5,25 @@
 #ifndef INC_10_1_GUMBALLMACHINE_H
 #define INC_10_1_GUMBALLMACHINE_H
 
+#include "State.h"
 
 class GumballMachine {
 public:
-    GumballMachine(int _count) : count{_count}, state{NO_QUARTER} {}
+    GumballMachine(int count);
+
+    void setState(State* state);
+    State* getHasQuarterState();
+    State* getNoQuarterState();
+
     void insertQuarter();
     void ejectQuarter();
     void turnCrank();
     void dispense();
 
 private:
-    enum State {
-        SOLD_OUT,
-        NO_QUARTER,
-        HAS_QUARTER,
-        SOLD
-    };
-
-    State state {SOLD_OUT};
+    State* state;
+    State* noQuarterState;
+    State* hasQuarterState;
     int count;
 };
 

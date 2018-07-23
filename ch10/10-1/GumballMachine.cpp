@@ -4,9 +4,30 @@
 
 #include <iostream>
 
-#include "GumballMachine.h"
+
+#include "NoQuarterState.h"
+#include "HasQuarterState.h"
+//#include "GumballMachine.h"
+
+GumballMachine::GumballMachine(int count) : count{count} {
+    noQuarterState = new NoQuarterState(this);
+    hasQuarterState = new HasQuarterState(this);
+}
+
+void GumballMachine::setState(State* state) {
+    this->state = state;
+}
+
+State* GumballMachine::getHasQuarterState() {
+    return hasQuarterState;
+}
+
+State* GumballMachine::getNoQuarterState() {
+    return noQuarterState;
+}
 
 void GumballMachine::insertQuarter() {
+/*
     switch (state) {
         case SOLD_OUT:
             std::cout << "Sold out" << std::endl;
@@ -22,64 +43,65 @@ void GumballMachine::insertQuarter() {
             std::cout << "WAIT. Gumball is dispensing" << std::endl;
             break;
     }
+    */
 }
 
 void GumballMachine::ejectQuarter() {
-    switch (state) {
-    case SOLD_OUT:
-        std::cout << "Sold out" << std::endl;
-        break;
-    case NO_QUARTER:
-        std::cout << "No quarter inserted" << std::endl;
-        break;
-    case HAS_QUARTER:
-        std::cout << "Eject Quarter" << std::endl;
-        state = NO_QUARTER;
-        break;
-    case SOLD:
-        std::cout << "WAIT. Gumball is dispensing" << std::endl;
-        break;
-    }
+//    switch (state) {
+//    case SOLD_OUT:
+//        std::cout << "Sold out" << std::endl;
+//        break;
+//    case NO_QUARTER:
+//        std::cout << "No quarter inserted" << std::endl;
+//        break;
+//    case HAS_QUARTER:
+//        std::cout << "Eject Quarter" << std::endl;
+//        state = NO_QUARTER;
+//        break;
+//    case SOLD:
+//        std::cout << "WAIT. Gumball is dispensing" << std::endl;
+//        break;
+//    }
 }
 
 void GumballMachine::turnCrank() {
-    switch (state) {
-    case SOLD_OUT:
-        std::cout << "Sold out" << std::endl;
-        break;
-    case NO_QUARTER:
-        std::cout << "No quarter inserted" << std::endl;
-        break;
-    case HAS_QUARTER:
-        std::cout << "Gumball sold" << std::endl;
-        state = SOLD;
-        break;
-    case SOLD:
-        std::cout << "Please turn one time" << std::endl;
-        break;
-    }
+//    switch (state) {
+//    case SOLD_OUT:
+//        std::cout << "Sold out" << std::endl;
+//        break;
+//    case NO_QUARTER:
+//        std::cout << "No quarter inserted" << std::endl;
+//        break;
+//    case HAS_QUARTER:
+//        std::cout << "Gumball sold" << std::endl;
+//        state = SOLD;
+//        break;
+//    case SOLD:
+//        std::cout << "Please turn one time" << std::endl;
+//        break;
+//    }
 }
 
 void GumballMachine::dispense() {
-    switch (state) {
-    case SOLD_OUT:
-        std::cout << "Sold out" << std::endl;
-        break;
-    case NO_QUARTER:
-        std::cout << "Please insert coin" << std::endl;
-        break;
-    case HAS_QUARTER:
-        std::cout << "Can`t dispense gumball" << std::endl;
-        break;
-    case SOLD:
-        std::cout << "Gumball is dispensing" << std::endl;
-        if (--count == 0) {
-            state = SOLD_OUT;
-
-        }
-        else {
-            state = NO_QUARTER;
-        }
-        break;
-    }
+//    switch (state) {
+//    case SOLD_OUT:
+//        std::cout << "Sold out" << std::endl;
+//        break;
+//    case NO_QUARTER:
+//        std::cout << "Please insert coin" << std::endl;
+//        break;
+//    case HAS_QUARTER:
+//        std::cout << "Can`t dispense gumball" << std::endl;
+//        break;
+//    case SOLD:
+//        std::cout << "Gumball is dispensing" << std::endl;
+//        if (--count == 0) {
+//            state = SOLD_OUT;
+//
+//        }
+//        else {
+//            state = NO_QUARTER;
+//        }
+//        break;
+//    }
 }
